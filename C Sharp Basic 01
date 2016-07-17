@@ -1,0 +1,24 @@
+// PRZESTRZENIE NAZW !
+using System;
+namespace Pierwsza_Stycznosc_01
+{
+    class Program // Robiac klasy najlepiej korzystac z nowego pliku.
+    {
+        static void Main(string[] args)
+        {
+              // Zmienne!
+            string naszTekst = "Witaj Swiecie C#"; //Zmienna na litery
+            bool naszaPrawda = false; // false or true
+            int naszInt = 10; // Liczby calkowite.
+            float naszFloat = 40.1f; // Liczby z przecinkami. Pod koniec zawsze trzeba dodac f by podkreslic float.
+
+            Console.Write(naszTekst);  // Wyswietla napis na tablicy
+            Console.ReadLine();
+
+            naszTekst = "PAPA Swiecie C#";
+            Console.Write(naszTekst);
+            Console.ReadLine();
+            
+        }
+    }
+}
