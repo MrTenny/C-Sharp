@@ -4,7 +4,10 @@ using System.Collections;
 public class FirstScript : MonoBehaviour
 {
 
-	// Use this for initialization
+    void Awake // W tej linijce skrypt wykona się pomimo wyłączonego całego skryptu.
+    {
+
+    }
 	void Start ()
     {
 	
@@ -15,4 +18,8 @@ public class FirstScript : MonoBehaviour
     {
 	
 	}
+    void FixedUpdate ()
+    {
+
+    }
 }
