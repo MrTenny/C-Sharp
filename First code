@@ -4,13 +4,13 @@ using System.Collections;
 public class FirstScript : MonoBehaviour
 {
 
-    void Awake // W tej linijce skrypt wykona się pomimo wyłączonego całego skryptu.
+    void Awake () // W tej linijce skrypt wykona się pomimo wyłączonego całego skryptu.
     {
-
+        Debug.Log ("Awake");
     }
 	void Start ()
     {
-	
+        Debug.Log("START");
 	}
 	
 	// Update is called once per frame  
