@@ -1,0 +1,37 @@
+// PRZESTRZENIE NAZW !
+using System;
+namespace Pierwsza_Stycznosc_01
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string naszTekst = "Witaj Swiecie C#";
+            string naszTekst2 = " - GITARA";
+
+            bool naszaPrawda = false;
+
+            int naszInt = 10;
+
+            float naszFloat = 40.1f;
+
+            naszTekst += naszTekst2;
+            naszInt += (int)naszFloat; // Dostał informacje za pomocą inta, żeby program myślał, że to liczba całkowita.
+
+            Console.Write(naszInt);
+            Console.ReadLine();
+
+            Console.Write(naszFloat);
+            Console.ReadLine();
+
+            Console.Write(naszTekst);
+            Console.ReadLine();
+
+            naszTekst = "PAPA Swiecie C#";
+
+            Console.Write(naszTekst);
+            Console.ReadLine();
+            
+        }
+    }
+}
