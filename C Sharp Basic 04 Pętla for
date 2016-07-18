@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication6
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+            for (int licznik = 0; licznik < 10; licznik++)
+            {
+                Console.Write("To jest petla: " + licznik + "\n");
+            }
+
+
+
+
+            Console.Write("Koniec Programu.");
+            Console.ReadKey();
+        }
+    }
+}
