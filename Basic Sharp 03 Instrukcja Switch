@@ -1,0 +1,49 @@
+using System;
+
+namespace ConsoleApplication5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            var a = 10;
+            var b = "ERROR";
+            var c = "GRATULACJE!";
+            var d = 30;
+            var pietra = 0;
+            bool e = false;
+
+            switch(pietra)
+            {
+                //case = następstwa warunków
+                case 0:
+                    Console.Write("CASE 0");
+                // instrukcja
+                break;
+                case 1:
+                    Console.Write("CASE 1");
+                    // instrukcja
+                    break;
+                case 2:
+                // instrukcja
+                break;
+                case 3:
+                // instrukcja
+                break;
+                case 4:
+                // instrukcja
+                break;
+                default: 
+                // Gdy nie zostanie spelniony żaden warunek wtedy BREAK "HAMUJ"
+                    break;
+            }
+
+
+
+
+
+
+        }
+    }
+}
