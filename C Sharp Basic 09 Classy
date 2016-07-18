@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Classy
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Pietra.iloscMieszkancow = 50; // Statyczne metody (static) nie są częścią instancji classy a samej classy!
+
+            Pietra naszePietra = new Pietra(); // Kopia naszej classy "instancja".
+            Pietra naszePietra2 = new Pietra();
+
+            /* Każda zmienna zadeklarowana w classie jest PRYWATNA!
+            * Trzeba ją upublicznić!
+            * public class Pietra */
+
+            naszePietra.iloscLudzi = 1;
+            naszePietra2.iloscLudzi = 10;
+
+            Console.WriteLine(naszePietra.iloscLudzi);
+            Console.WriteLine(naszePietra2.iloscLudzi);
+            Console.ReadLine();
+        }
+    }
+}   class Pietra
+{
+    public int iloscLudzi;
+    public static int iloscMieszkancow;    
+    /* Definicja statyczna składowej danych.
+     * ---------------------------------------
+     * Statyczne metody (static) nie są
+     * częścią instancji classy a samej classy!
+     * Dlatego po wpisaniu w 13 linijce jestesmy
+     * w stanie wpisac klase public static int iloscMieszkancow;*/
+}
