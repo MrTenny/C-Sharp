@@ -1,0 +1,50 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int zab;
+            zab = 0;
+            int i;
+            int j;
+
+
+            // PETLA FOR. \/
+            for (i = 0, j = 20; i<j; i++, j-- )
+            {
+
+            }
+
+
+            // PETLA WHILE. \/          WARUNEK BEDZIE WYKONYWANY JESLI DALEJ BEDZIE SPEŁNIAŁ WARUNEK PRAWDY!
+            while (zab < 100) // PETLA. NIE KONCZYMY WTEDY JEJ ; TYM!!!!!!!!! NO CHYBA ZE W DO WHILE
+            {
+                if (zab == 8) ;
+                break;
+                Console.Write(zab);
+                Console.ReadKey();
+                zab++;
+            }
+
+
+
+
+            // PETLA DO WHILE. \/
+            do
+            {
+                Console.WriteLine(zab);
+
+                if (zab == 8) // PETLA!
+                    break;
+                zab++;
+            } while (zab < 100);
+                Console.ReadLine(); 
+        }
+    }
+}
