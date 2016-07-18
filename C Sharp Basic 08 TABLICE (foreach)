@@ -1,0 +1,37 @@
+// TABLICE (foreach)
+using System;
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int[] pietra = new int[5];
+            /*new - by stworzyc referencje.
+             *Tablica musi mieć swój rozmiar.
+             *Musi wiedzieć ile referencji będzie trzymać.
+             */
+
+            string xquit;
+            // Pietra nazywamy KOLEKCJĄ. Bo faktycznie widać niżej nią jest. \/
+            pietra[0] = 30; // 30 = ilosc osob w tym przypadku.
+            pietra[4] = 1;
+
+            pietra[0] = 1;
+            pietra[4] = 1;
+            pietra[2] = 29;
+
+            foreach (var i in pietra)
+
+                /* foreach - prześledzi wszystkie piętra (zmienne).
+                   var - ponieważ przybiera on kształt jakiejkolwiek zmiennej.
+                   i in pietra - W kolekcji.*/
+
+            Console.WriteLine(i);
+
+            Console.WriteLine(xquit = "PROGRAM SIE WYLACZY! KLIKNIJ [ENTER]");
+            Console.ReadLine();
+        }
+    }
+}
