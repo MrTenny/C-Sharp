@@ -1,0 +1,19 @@
+// TABLICE!
+using System;
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int[] pietra = new int[5]; // new - by stworzyc referencje. Tablica musi mieć swój rozmiar. Musi wiedzieć ile referencji będzie trzymać.
+            var pietra2 = new decimal[11]; // Dzięki referencji waga tego wynosi tylko 11 bajtów zamiast 1400 +.
+
+            // Nie ma sensu robić tak jak poniżej \/ Zbędnie zajmujemy wage.
+            string test = "LLXLXLLX";
+            test = test + "LDDDDDDDDDDDDDDDDD";
+
+        }
+    }
+}
