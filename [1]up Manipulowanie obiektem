@@ -1,0 +1,25 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class NewBehaviourScript : MonoBehaviour {
+
+    Transform t;
+
+
+    void Start ()
+    {
+        t = GetComponent<Transform>();
+        t.position = new Vector3(10,1,1); // Vector 3 to x,y,z ,Vector2 to x,y
+    }
+	
+
+
+
+
+
+
+	void Update () {
+		
+	}
+}
