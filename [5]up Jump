@@ -1,0 +1,38 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+[RequireComponent(typeof(Rigidbody))]
+
+
+public class NewBehaviourScript : MonoBehaviour {
+
+private Rigidbody rbody;
+public float ballSpeed = 15f;
+// float speedShift = 100f;  - actually usseles
+public float jumpForce = 3f;
+private Transform t;
+
+    void Start ()
+    {
+        rbody = GetComponent<Rigidbody>();
+        t=GetComponent<Transform>();
+    }
+
+
+    void Update()
+    {
+        Debug.DrawRay(t.position,Vector3.down,Color.green);
+        if(Physics.Raycast (t.position,Vector3.down,1f) && Input.GetButtonDown("Jump")){
+                rbody.AddForce(Vector3.up * jumpForce,ForceMode.Impulse);
+
+        }
+    }
+
+
+	void FixedUpdate () {
+        float vert =Input.GetAxis ("Vertical");  // gora - dol
+        float hori =Input.GetAxis("Horizontal"); // lewo - prawo
+        rbody.AddForce(new Vector3(hori,0,vert) *ballSpeed);
+    }
+}
