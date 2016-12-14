@@ -1,0 +1,41 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+[RequireComponent(typeof(Rigidbody))]
+
+
+public class NewBehaviourScript : MonoBehaviour {
+
+Rigidbody rbody;
+public float ballSpeed = 10f;
+// float speedShift = 100f;  - actually usseles
+public float jumpForce = 5f;
+private Transform t;
+
+    void Start ()
+    {
+        rbody = GetComponent<Rigidbody>();
+        t=GetComponent<Transform>();
+    }
+
+
+    void Update()
+    {
+        Vector3 dir = t.TransformDirection(Vector3.down *30); // TransformDirection zmienia nam obrót.
+        Debug.DrawRay(t.position,dir,Color.green);
+
+
+        if(Input.GetButtonDown("Jump"))
+           {                                      // GetButton sprawdza czy jest wcisniety Jump
+        rbody.AddForce(Vector3.up * jumpForce,ForceMode.Impulse);
+           }
+    }
+
+
+	void FixedUpdate () {
+        float vert =Input.GetAxis ("Vertical");  // gora - dol
+        float hori =Input.GetAxis("Horizontal"); // lewo - prawo
+        rbody.AddForce(new Vector3(hori,0,vert) *ballSpeed);
+    }
+}
