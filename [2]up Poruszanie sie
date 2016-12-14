@@ -1,0 +1,46 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class NewBehaviourScript : MonoBehaviour {
+
+    Transform t;
+
+
+    void Start ()
+    {
+        t = GetComponent<Transform>();
+    }
+
+
+
+
+
+	void Update () {
+        if (Input.GetKey(KeyCode.W))
+        {
+            t.position = t.position + Vector3.forward * 10f * Time.deltaTime;
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            t.position = t.position + Vector3.back * 10f * Time.deltaTime;
+        }
+        if (Input.GetKey(KeyCode.A))
+        {
+            t.position = t.position + Vector3.left * 10f * Time.deltaTime;
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            t.position = t.position + Vector3.right * 10f * Time.deltaTime;
+        }
+        if (Input.GetKey(KeyCode.LeftControl))
+        {
+            t.position = t.position + Vector3.down * 10f * Time.deltaTime;
+        }
+        if (Input.GetKey(KeyCode.Space))
+        {
+            t.position = t.position + Vector3.up * 10f * Time.deltaTime;
+        }
+
+    }
+}
