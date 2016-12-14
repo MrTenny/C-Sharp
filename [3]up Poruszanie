@@ -1,0 +1,28 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+[RequireComponent(typeof(Rigidbody))]
+
+
+public class NewBehaviourScript : MonoBehaviour {
+
+Rigidbody rbody;
+public float ballSpeed = 10f;
+// float speedShift = 100f;  - actually usseles
+
+    void Start ()
+    {
+        rbody = GetComponent<Rigidbody>();
+    }
+
+
+
+
+
+	void FixedUpdate () {
+        float vert =Input.GetAxis ("Vertical");  // gora - dol
+        float hori =Input.GetAxis("Horizontal"); // lewo - prawo
+        rbody.AddForce(new Vector3(hori,0,vert) *ballSpeed);
+    }
+}
